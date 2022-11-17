@@ -2,22 +2,17 @@
  *la clase encargada de ejecutar 
  */
 package principalS;
-import Modelo.ModeloExcel;
+import Modelo.ModeloTXT;
 import Vista.vistaS1;
-import Controlador.ControladorExcel;
+import Controlador.Controlador;
 import java.io.IOException;
-
-/**
- *
- * @giovanni
- */
 public class Ejecutar {
     public static void main(String[] args) throws IOException {
-        ModeloExcel modeloE = new ModeloExcel();
+
+        ModeloTXT  modeloT= new ModeloTXT();
         vistaS1 vistaE=new  vistaS1();
-        ControladorExcel contraControladorExcel = new ControladorExcel(vistaE, modeloE);
+        Controlador contraControladorExcel = new Controlador(vistaE,modeloT);
         vistaE.setVisible(true);
         vistaE.setLocationRelativeTo(null);
-    }
-    
+    } 
 }
